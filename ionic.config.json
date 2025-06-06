@@ -1,0 +1,7 @@
+{
+  "name": "getting-started-esiea-il-bachelor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
