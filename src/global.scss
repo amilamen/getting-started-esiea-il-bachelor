@@ -34,4 +34,12 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+.error-message {
+  color: var(--ion-color-danger);
+  font-size: small;
+  margin-left: 16px;
+  margin-top: -10px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,21 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  height: 90vh;
+}
+
+ion-item {
+  margin-bottom: 1rem;
+}
+
+.register-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  ion-button {
+    width: 90%;
+  }
+}

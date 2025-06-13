@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inscription
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="register-form" [formGroup]="registerForm">
+    <ion-item>
+      <ion-input label="Nom"
+                 type="text"
+                 labelPlacement="stacked"
+                 placeholder="Entrer votre nom"
+                 [required]="true"
+                 pattern="[a-zA-Z]*"
+                 formControlName="lastName">
+      </ion-input>
+    </ion-item>
+    @if(registerForm.controls.lastName.errors && registerForm.controls.lastName.dirty) {
+      <span class="error-message">Votre nom est obligatoire. </span>
+    }
+
+    <ion-item>
+      <ion-input label="Prénom"
+                 type="text"
+                 labelPlacement="stacked"
+                 placeholder="Entrer votre prénom"
+                 [required]="true"
+                 formControlName="firstName">
+      </ion-input>
+    </ion-item>
+    @if(registerForm.controls.firstName.errors && registerForm.controls.firstName.dirty) {
+      <span class="error-message">Votre nom est obligatoire. </span>
+    }
+
+
+    <ion-item>
+      <ion-input label="E-mail"
+                 type="email"
+                 labelPlacement="stacked"
+                 placeholder="Entrer votre e-mail"
+                 [required]="true"
+                 formControlName="email">
+      </ion-input>
+    </ion-item>
+    @if(registerForm.controls.email.errors && registerForm.controls.email.dirty) {
+      <span class="error-message">Votre email est invalide. </span>
+    }
+
+    <ion-item>
+      <ion-input label="Mot de passe"
+                 [type]="typeOfPasswordInput"
+                 labelPlacement="stacked"
+                 placeholder="Entrer votre mot de passe"
+                 [required]="true"
+                 formControlName="password">
+        <ion-icon [name]="iconOfPasswordInput"
+                  slot="end"
+                  (click)="onTogglePasswordVisibility()">
+        </ion-icon>
+      </ion-input>
+    </ion-item>
+    @if(registerForm.controls.password.errors && registerForm.controls.password.dirty) {
+      <span class="error-message">Votre mot de passe est invalide. </span>
+    }
+
+    <div class="register-button">
+      <ion-button mode="ios" expand="block" (click)="onRegister()" [disabled]="registerForm.invalid">
+        S'inscrire
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

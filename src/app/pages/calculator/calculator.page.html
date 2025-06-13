@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculatrice <span>{{ firstName }}</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-calculator-screen [screenResult]="screenResult"  />
+
+  <div class="calculator-buttons">
+    <div class="calculator-button">
+      <ion-button (click)="onChooseValue(1)">1</ion-button>
+      <ion-button (click)="onChooseValue(2)">2</ion-button>
+      <ion-button (click)="onChooseValue(3)">3</ion-button>
+      <ion-button (click)="onChooseOperator('+')">+</ion-button>
+    </div>
+
+    <div class="calculator-button">
+      <ion-button (click)="onChooseValue(4)">4</ion-button>
+      <ion-button (click)="onChooseValue(5)">5</ion-button>
+      <ion-button (click)="onChooseValue(6)">6</ion-button>
+      <ion-button (click)="onChooseOperator('-')">-</ion-button>
+    </div>
+
+    <div class="calculator-button">
+      <ion-button (click)="onChooseValue(7)">7</ion-button>
+      <ion-button (click)="onChooseValue(8)">8</ion-button>
+      <ion-button (click)="onChooseValue(9)">9</ion-button>
+      <ion-button (click)="onChooseOperator('*')">*</ion-button>
+    </div>
+
+    <div class="calculator-button">
+      <ion-button (click)="onChooseOperator('.')">.</ion-button>
+      <ion-button (click)="onChooseValue(0)">0</ion-button>
+      <ion-button (click)="onCalculResult()">=</ion-button>
+      <ion-button (click)="onChooseOperator('/')">/</ion-button>
+    </div>
+  </div>
+</ion-content>

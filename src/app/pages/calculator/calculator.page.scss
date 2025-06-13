@@ -1,0 +1,21 @@
+ion-title > span {
+  float: right;
+}
+
+.calculator-buttons {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.calculator-button {
+  display: flex;
+  justify-content: center;
+}
+
+ion-button {
+  width: 22%;
+  height: 80px;
+  font-size: 2rem;
+}
